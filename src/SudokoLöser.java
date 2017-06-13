@@ -30,7 +30,8 @@ import java.util.Scanner;
                 }
 
             }
-           feld.solve(feld.getFeld());
+            feld.saveToStartFeld();
+            feld.solve();
         }
 
 

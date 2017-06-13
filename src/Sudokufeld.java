@@ -3,6 +3,7 @@
  */
 public class Sudokufeld {
     private int[][] feld = new int[9][9];
+    private  int[][] startFeld;
     private Valuechecker valuechecker = new Valuechecker(this);
 
     public int getValueAt(int x, int y) {
@@ -20,18 +21,25 @@ public class Sudokufeld {
         }
 
     }
+    public void saveToStartFeld(){
+        startFeld = feld;
+    }
 
-    public void solve(int[][] feld) {
+    public void solve() {
+        feld = startFeld;
+        print();
 
         for (int x = 0; feld.length > x; x++) {
             int[] row = feld[x];
             for (int y = 0; row.length > y; y++) {
                 if (feld[x][y] == 0) {
                     int rightValue = valuechecker.findRightNumber(x,y);
-                    feld[x][y] = rightValue;
                     if (rightValue == 99){
-                        solve(feld);
+                        solve();
                     }
+                    feld[x][y] = rightValue;
+                    System.out.println(rightValue);
+
                 }
             }
         }
