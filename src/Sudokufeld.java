@@ -28,6 +28,7 @@ public class Sudokufeld {
     public void solve() {
         feld = startFeld;
         print();
+        System.out.println("____________________________________________________");
 
         for (int x = 0; feld.length > x; x++) {
             int[] row = feld[x];
@@ -38,7 +39,6 @@ public class Sudokufeld {
                         solve();
                     }
                     feld[x][y] = rightValue;
-                    System.out.println(rightValue);
 
                 }
             }
