@@ -31,7 +31,13 @@ import java.util.Scanner;
                 }
                 int y = Integer.valueOf(input);
                 System.out.println("Wert:");
-                int value = Integer.valueOf(scanner.nextLine());
+                input = scanner.nextLine();
+                if (input.isEmpty()){
+                    feld.print(feld.getFeld());
+                    break;
+                }
+                int value = Integer.valueOf(input);
+
                 feld.setValueAt(y-1,x-1,value);
 
 
