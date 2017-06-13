@@ -25,7 +25,7 @@ import java.util.Scanner;
                 System.out.println("Solve ? y/n");
                 if (scanner.nextLine().equals("y"))
                 {
-                    feld.print();
+                    feld.print(feld.getFeld());
                     break;
                 }
 

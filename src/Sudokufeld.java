@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by Jerk on 13.06.2017.
  */
@@ -11,9 +13,6 @@ public class Sudokufeld {
 
     }
 
-    public int[][] getFeld(){
-        return feld;
-    }
 
     public void setValueAt(int x, int y, int value) {
         if (x <= 8 && x >= 0 && y <= 8 && y >= 0) {
@@ -22,12 +21,14 @@ public class Sudokufeld {
 
     }
     public void saveToStartFeld(){
-        startFeld = feld;
+       startFeld = Arrays.stream(feld).map(int[]::clone).toArray(int[][]::new);
+
     }
 
     public void solve() {
-        feld = startFeld;
-        print();
+        print(feld);
+        feld = Arrays.stream(startFeld).map(int[]::clone).toArray(int[][]::new);
+
         System.out.println("____________________________________________________");
 
         for (int x = 0; feld.length > x; x++) {
@@ -39,16 +40,15 @@ public class Sudokufeld {
                         solve();
                     }
                     feld[x][y] = rightValue;
-
                 }
             }
         }
-        System.out.println("Solved Array");
-        print();
+        System.out.println("Solved Array : ");
+        print(feld);
     }
 
 
-    public void print() {
+    public void print(int[][] feld) {
         int i = 1;
         for (int[] row : feld) {
             System.out.println(row[0] + " " + row[1] + " " + row[2] + "  " + row[3] + " " + row[4] + " " + row[5] + "  " + row[6] + " " + row[7] + " " + row[8]);
@@ -106,5 +106,9 @@ public class Sudokufeld {
         }
         return squareArray;
 
+    }
+
+    public int[][] getFeld() {
+        return feld;
     }
 }
