@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * Created by Jerk on 13.06.2017.
  */
@@ -9,10 +12,15 @@ public class Valuechecker {
     }
 
     public int findRightNumber(int x, int y){
+        ArrayList<Integer> possibleNumbers = new ArrayList<>();
         for (int i = 1; 10 > i ; i++) {
-            if (isNotInRow(x,y,i) && isNotInColumn(x,y,i) && isNotInSquare(x,y,i)){
-                return i;
+            if (isNotInRow(i,x,y) && isNotInColumn(i,x,y)){ //&& isNotInSquare(x,y,i)){
+                possibleNumbers.add(i);
             }
+
+        }
+        if (!possibleNumbers.isEmpty()){
+            return possibleNumbers.get(new Random().nextInt(possibleNumbers.size()));
         }
         return 99;
     }

@@ -28,9 +28,9 @@ import java.util.Scanner;
                     feld.print();
                     break;
                 }
-                feld.solve();
 
             }
+           feld.solve(feld.getFeld());
         }
 
 

@@ -10,6 +10,10 @@ public class Sudokufeld {
 
     }
 
+    public int[][] getFeld(){
+        return feld;
+    }
+
     public void setValueAt(int x, int y, int value) {
         if (x <= 8 && x >= 0 && y <= 8 && y >= 0) {
             feld[x][y] = value;
@@ -17,14 +21,17 @@ public class Sudokufeld {
 
     }
 
-    public void solve() {
+    public void solve(int[][] feld) {
+
         for (int x = 0; feld.length > x; x++) {
             int[] row = feld[x];
             for (int y = 0; row.length > y; y++) {
                 if (feld[x][y] == 0) {
                     int rightValue = valuechecker.findRightNumber(x,y);
                     feld[x][y] = rightValue;
-                    System.out.println(rightValue);
+                    if (rightValue == 99){
+                        solve(feld);
+                    }
                 }
             }
         }
