@@ -7,12 +7,13 @@ import java.util.Scanner;
      * Created by Jerk on 13.06.2017.
      */
     public class SudokoLöser {
-        private Sudokufeld feld = new Sudokufeld();
 
 
         public SudokoLöser() {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Gebe deine Zahlen. Drücke Enter ohne eine Zahl um zu Lösen");
+            Sudokufeld feld = new Sudokufeld();
+
             while (true){
 
                 System.out.println("X Position:");

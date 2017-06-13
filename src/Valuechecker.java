@@ -4,6 +4,7 @@ import java.util.Random;
 /**
  * Created by Jerk on 13.06.2017.
  */
+
 public class Valuechecker {
     private Sudokufeld feld;
 
