@@ -21,7 +21,7 @@ import java.util.Scanner;
                 int y = Integer.valueOf(scanner.nextLine());
                 System.out.println("Wert:");
                 int value = Integer.valueOf(scanner.nextLine());
-                feld.setValueAt(x-1,y-1,value);
+                feld.setValueAt(y-1,x-1,value);
                 System.out.println("Solve ? y/n");
                 if (scanner.nextLine().equals("y"))
                 {
