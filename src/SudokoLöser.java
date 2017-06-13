@@ -12,22 +12,27 @@ import java.util.Scanner;
 
         public SudokoLöser() {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Geb deine Zahlen");
+            System.out.println("Gebe deine Zahlen. Drücke Enter ohne eine Zahl um zu Lösen");
             while (true){
 
                 System.out.println("X Position:");
-                int x = Integer.valueOf(scanner.nextLine());
-                System.out.println("Y Position:");
-                int y = Integer.valueOf(scanner.nextLine());
-                System.out.println("Wert:");
-                int value = Integer.valueOf(scanner.nextLine());
-                feld.setValueAt(y-1,x-1,value);
-                System.out.println("Solve ? y/n");
-                if (scanner.nextLine().equals("y"))
-                {
+                String input = scanner.nextLine();
+                if (input.isEmpty()){
                     feld.print(feld.getFeld());
                     break;
                 }
+                int x = Integer.valueOf(input);
+                System.out.println("Y Position:");
+                input = scanner.nextLine();
+                if (input.isEmpty()){
+                    feld.print(feld.getFeld());
+                    break;
+                }
+                int y = Integer.valueOf(input);
+                System.out.println("Wert:");
+                int value = Integer.valueOf(scanner.nextLine());
+                feld.setValueAt(y-1,x-1,value);
+
 
             }
             feld.saveToStartFeld();

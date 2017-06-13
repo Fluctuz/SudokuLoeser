@@ -3,15 +3,15 @@ import java.util.Arrays;
 /**
  * Created by Jerk on 13.06.2017.
  */
-public class Sudokufeld {
-    private int[][] feld = new int[9][9];
-    private  int[][] startFeld;
-    private Valuechecker valuechecker = new Valuechecker(this);
+    public class Sudokufeld {
+        private int[][] feld = new int[9][9];
+        private  int[][] startFeld;
+        private Valuechecker valuechecker = new Valuechecker(this);
 
-    public int getValueAt(int x, int y) {
-        return (x <= 8 && x >= 0 && y <= 8 && y >= 0) ? feld[x][y] : 0;
+        public int getValueAt(int x, int y) {
+            return (x <= 8 && x >= 0 && y <= 8 && y >= 0) ? feld[x][y] : 0;
 
-    }
+        }
 
 
     public void setValueAt(int x, int y, int value) {
@@ -26,10 +26,7 @@ public class Sudokufeld {
     }
 
     public void solve() {
-        print(feld);
         feld = Arrays.stream(startFeld).map(int[]::clone).toArray(int[][]::new);
-
-        System.out.println("____________________________________________________");
 
         for (int x = 0; feld.length > x; x++) {
             int[] row = feld[x];
@@ -45,6 +42,7 @@ public class Sudokufeld {
         }
         System.out.println("Solved Array : ");
         print(feld);
+        System.exit(1);
     }
 
 
@@ -96,10 +94,10 @@ public class Sudokufeld {
         }
     }
     private int[] getSquareArray(int x, int y){
-        int[] squareArray = new int[8];
+        int[] squareArray = new int[9];
         int l = 0;
-        for (int i= 0 ; 3 >  i; i++ ){
-            for (int j = 0 ; 3 > j; j++){
+        for (int i= 0 ; 2 >=  i; i++ ){
+            for (int j = 0 ; 2 >= j; j++){
                 squareArray[l] = getValueAt(x+i,y+j);
                 l++;
             }

@@ -14,7 +14,7 @@ public class Valuechecker {
     public int findRightNumber(int x, int y){
         ArrayList<Integer> possibleNumbers = new ArrayList<>();
         for (int i = 1; 10 > i ; i++) {
-            if (isNotInRow(i,x,y) && isNotInColumn(i,x,y)){ //&& isNotInSquare(x,y,i)){
+            if (isNotInRow(i,x,y) && isNotInColumn(i,x,y) && isNotInSquare(x,y,i)){
                 possibleNumbers.add(i);
             }
 
