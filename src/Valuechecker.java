@@ -12,43 +12,41 @@ public class Valuechecker {
         this.feld = feld;
     }
 
-    public int findRightNumber(int x, int y){
+    public int findLegalNumber(int x, int y){
         ArrayList<Integer> possibleNumbers = new ArrayList<>();
+
         for (int i = 1; 10 > i ; i++) {
-            if (isNotInRow(i,x,y) && isNotInColumn(i,x,y) && isNotInSquare(x,y,i)){
+            if (isNotInRow(i,x) && isNotInColumn(i,y) && isNotInSquare(x,y,i)){
                 possibleNumbers.add(i);
             }
-
         }
+
         if (!possibleNumbers.isEmpty()){
+            //Pick a random legal Number
             return possibleNumbers.get(new Random().nextInt(possibleNumbers.size()));
         }
+        //No Legal Number exits
         return 99;
     }
 
-    private boolean isNotInSquare(int x, int y, int i) {
-        for (int num : feld.getSquare(x,y)){
-            if (num == i){
+    private boolean isNumberInArray(int number, int[] array){
+        for (int num : array){
+            if (num == number){
                 return false;
             }
         }
         return true;
     }
 
-    private boolean isNotInRow(int i, int x, int y) {
-        for (int num : feld.getRow(x)){
-            if (num == i){
-                return false;
-            }
-        }
-        return true;
+    private boolean isNotInSquare(int x, int y, int i) {
+       return isNumberInArray(i,feld.getSquareArrayByCoordinate(x,y));
     }
-    private boolean isNotInColumn(int i, int x, int y) {
-        for (int num : feld.getColumn(y)){
-            if (num == i){
-                return false;
-            }
-        }
-        return true;
+
+    private boolean isNotInRow(int i, int x) {
+       return isNumberInArray(i, feld.getRow(x));
+
+    }
+    private boolean isNotInColumn(int i, int y) {
+        return isNumberInArray(i,feld.getColumn(y));
     }
 }
