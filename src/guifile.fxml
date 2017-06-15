@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFxController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFxController">
    <children>
       <Pane layoutX="89.0" layoutY="39.0" prefHeight="103.0" prefWidth="380.0">
          <children>
@@ -18,26 +18,26 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField fx:id="T0"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField fx:id="T1"  alignment="CENTER" GridPane.columnIndex="1" />
-                  <TextField fx:id="T9"  alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T0" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T1" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T9" alignment="CENTER" GridPane.rowIndex="1" />
                   <TextField fx:id="T10" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="T18" alignment="CENTER" GridPane.rowIndex="2" />
                   <TextField fx:id="T19" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="T2"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T2" alignment="CENTER" GridPane.columnIndex="2" />
                   <TextField fx:id="T11" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <TextField fx:id="T20" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane layoutX="142.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="T3"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField fx:id="T4"  alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T3" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T4" alignment="CENTER" GridPane.columnIndex="1" />
                   <TextField fx:id="T12" alignment="CENTER" GridPane.rowIndex="1" />
                   <TextField fx:id="T13" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="T21" alignment="CENTER" GridPane.rowIndex="2" />
                   <TextField fx:id="T22" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="T5"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T5" alignment="CENTER" GridPane.columnIndex="2" />
                   <TextField fx:id="T14" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <TextField fx:id="T23" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
@@ -54,13 +54,13 @@
             </GridPane>
             <GridPane layoutX="280.0" layoutY="2.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="T6"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField fx:id="T7"  alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T6" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T7" alignment="CENTER" GridPane.columnIndex="1" />
                   <TextField fx:id="T15" alignment="CENTER" GridPane.rowIndex="1" />
                   <TextField fx:id="T16" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="T24" alignment="CENTER" GridPane.rowIndex="2" />
                   <TextField fx:id="T25" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="T8"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T8" alignment="CENTER" GridPane.columnIndex="2" />
                   <TextField fx:id="T17" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <TextField fx:id="T26" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
@@ -223,6 +223,7 @@
             </GridPane>
          </children>
       </Pane>
-      <Button fx:id="solveBtn" layoutX="497.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#onPressed" prefHeight="25.0" prefWidth="86.0" text="Lösen" />
+      <Button fx:id="solveBtn" layoutX="492.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#onPressed" prefHeight="25.0" prefWidth="86.0" text="Lösen" />
+      <Button layoutX="492.0" layoutY="337.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="86.0" text="Reset" />
    </children>
 </AnchorPane>

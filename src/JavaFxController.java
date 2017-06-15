@@ -35,7 +35,12 @@ public class JavaFxController implements Initializable {
             counter++;
         }
     }
-
+    @FXML
+    void reset(Event event){
+        for (TextField field: sudokuFields){
+            field.setText("");
+        }
+    }
 
     private int[][] fetchValuesFromFeld() {
         int[][] sudokuFeld = new int[9][9];
