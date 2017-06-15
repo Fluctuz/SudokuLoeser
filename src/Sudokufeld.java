@@ -5,9 +5,10 @@ public class Sudokufeld {
     private int[][] feld = new int[9][9];
     private int[][] startFeld;
     private Valuechecker valuechecker = new Valuechecker(this);
+    private int[][] solvedFeld = new int[11][];
 
 
-    public void solve() {
+    public int[][] solve() {
         boolean allValuesLegal = true;
         feld = copy2DArray(startFeld);
 
@@ -28,15 +29,22 @@ public class Sudokufeld {
             System.out.println("Solved Array : ");
             System.out.println();
             print(feld);
+            solvedFeld = feld;
+            return solvedFeld;
         } else {
             //next try
             solve();
         }
+        return solvedFeld;
     }
 
     public void saveStartFeld() {
         startFeld = copy2DArray(feld);
+    }
 
+
+    public void saveStartFeld(int[][] feld) {
+        startFeld = copy2DArray(feld);
     }
 
     //Funktion überladen in java kann man 2 Funktion mit gleichen Namen aber verschiedener Argumnte haben
@@ -44,7 +52,7 @@ public class Sudokufeld {
         print(feld);
     }
 
-    private void print(int[][] feld) {
+    public void print(int[][] feld) {
         int i = 1;
         for (int[] row : feld) {
             System.out.println(row[0] + " " + row[1] + " " + row[2] + "  " + row[3] + " " + row[4] + " " + row[5] + "  " + row[6] + " " + row[7] + " " + row[8]);
@@ -126,4 +134,5 @@ public class Sudokufeld {
             feld[x][y] = value;
         }
     }
+
 }

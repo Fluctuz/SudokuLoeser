@@ -11,14 +11,14 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     public static void main(String... args) {
-        SudokoLöser sudokoLöser = new SudokoLöser();
-        launch(args);
+       // new SudokoLöser(false);
+       launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("guifile.fxml"));
-        Parent root = (Parent) loader.load();
+        Parent root = loader.load();
         primaryStage.setTitle("Sudokulöser");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();

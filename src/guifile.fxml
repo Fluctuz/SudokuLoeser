@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFxController">
    <children>
       <Pane layoutX="89.0" layoutY="39.0" prefHeight="103.0" prefWidth="380.0">
          <children>
@@ -18,28 +18,28 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField fx:id="L11" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField onAction="#L21" GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="L31" GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T0"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T1"  alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T9"  alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T10" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T18" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T19" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T2"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T11" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T20" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane layoutX="142.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="L41" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T3"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T4"  alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T12" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T13" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T21" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T22" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T5"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T14" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T23" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -54,15 +54,15 @@
             </GridPane>
             <GridPane layoutX="280.0" layoutY="2.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T6"  alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T7"  alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T15" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T16" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T24" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T25" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T8"  alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T17" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T26" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -81,15 +81,15 @@
          <children>
             <GridPane prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="L111" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField onAction="#L21" GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="L311" GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T27" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T28" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T36" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T37" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T45" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T46" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T29" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T38" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T47" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -104,15 +104,15 @@
             </GridPane>
             <GridPane layoutX="142.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="L411" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T30" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T31" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T39" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T40" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T48" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T49" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T32" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T41" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T50" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -127,15 +127,15 @@
             </GridPane>
             <GridPane layoutX="280.0" layoutY="2.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T33" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T34" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T42" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T43" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T51" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T52" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T35" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T44" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T53" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -154,15 +154,15 @@
          <children>
             <GridPane prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="L112" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField onAction="#L21" GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="L312" GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T54" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T55" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T63" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T64" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T72" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T73" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T56" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T65" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T74" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -177,15 +177,15 @@
             </GridPane>
             <GridPane layoutX="142.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="L412" prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T57" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T58" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T66" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T67" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T75" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T76" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T59" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T68" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T77" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -200,15 +200,15 @@
             </GridPane>
             <GridPane layoutX="280.0" layoutY="2.0" prefHeight="100.0" prefWidth="100.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="37.0" />
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="T60" alignment="CENTER" prefHeight="25.0" prefWidth="37.0" />
+                  <TextField fx:id="T61" alignment="CENTER" GridPane.columnIndex="1" />
+                  <TextField fx:id="T69" alignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="T70" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="T78" alignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="T79" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="T62" alignment="CENTER" GridPane.columnIndex="2" />
+                  <TextField fx:id="T71" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="T80" alignment="CENTER" prefHeight="19.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -223,6 +223,6 @@
             </GridPane>
          </children>
       </Pane>
-      <Button fx:id="solveBtn" layoutX="497.0" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Lösen" />
+      <Button fx:id="solveBtn" layoutX="497.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#onPressed" prefHeight="25.0" prefWidth="86.0" text="Lösen" />
    </children>
 </AnchorPane>

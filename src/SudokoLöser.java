@@ -9,35 +9,46 @@ import java.util.Scanner;
     public class SudokoLöser {
         private Sudokufeld feld = new Sudokufeld();
 
-        public SudokoLöser() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Gebe deine Zahlen ein. Drücke nur Enter zum Lösen");
-
-
-            while (true){
-
-                System.out.println("X Position:");
-                String input = scanner.nextLine();
-                if (input.isEmpty()){
-                    break;
-                }
-                int x = Integer.valueOf(input);
-                System.out.println("Y Position:");
-                input = scanner.nextLine();
-                if (input.isEmpty()){
-                    break;
-                }
-                int y = Integer.valueOf(input);
-                System.out.println("Wert:");
-                input = scanner.nextLine();
-                if (input.isEmpty()){
-                    break;
-                }
-                int value = Integer.valueOf(input);
-                feld.setValueAt(y-1,x-1,value);
+        public SudokoLöser(boolean openInGui) {
+            if (!openInGui){
+                consoleStart();
             }
-            startSolving();
         }
+
+        public int[][] solveSudokuFeld(int[][] feldToSolve){
+            feld.saveStartFeld(feldToSolve);
+            return feld.solve();
+        }
+
+
+        private void consoleStart(){
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Gebe deine Zahlen ein. Drücke nur Enter zum Lösen");
+
+                while (true){
+
+                    System.out.println("X Position:");
+                    String input = scanner.nextLine();
+                    if (input.isEmpty()){
+                        break;
+                    }
+                    int x = Integer.valueOf(input);
+                    System.out.println("Y Position:");
+                    input = scanner.nextLine();
+                    if (input.isEmpty()){
+                        break;
+                    }
+                    int y = Integer.valueOf(input);
+                    System.out.println("Wert:");
+                    input = scanner.nextLine();
+                    if (input.isEmpty()){
+                        break;
+                    }
+                    int value = Integer.valueOf(input);
+                    feld.setValueAt(y-1,x-1,value);
+                }
+                startSolving();
+            }
 
         private void startSolving(){
             System.out.println("Start Sudokufeld : ");
@@ -46,5 +57,6 @@ import java.util.Scanner;
             feld.saveStartFeld();
             feld.solve();
         }
+
     }
 
